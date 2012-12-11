@@ -13,4 +13,4 @@ salt=`curl http://192.168.0.1 2>/dev/null | grep "salt =" | cut -d'"' -f2`
 url=`node get-url.js $salt $code`
 
 curl $url >/dev/null 2>&1
-curl http://192.168.0.1/interface_stats.xml 2>/dev/null | tidy -xml 2>/dev/null
+curl http://192.168.0.1/$1.xml 2>/dev/null | tidy -xml 2>/dev/null

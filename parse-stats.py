@@ -12,7 +12,7 @@ from socket import socket
 CARBON_SERVER = '127.0.0.1'
 CARBON_PORT = 2003
 
-stats = subprocess.check_output("get-stats.sh", shell=True)
+stats = subprocess.check_output("./get-stats.sh interface_stats", shell=True)
 root = ET.fromstring(stats)
 now = str( time.time())
 
